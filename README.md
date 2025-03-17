@@ -9,7 +9,7 @@ ActiveSG gyms, located across various sports centers in Singapore, aim to provid
 
 ## 2. **Overview:**
 
-![image](https://github.com/user-attachments/assets/b5543224-d950-465f-9d97-0b8d5859d99f)
+![image](https://github.com/user-attachments/assets/3d4e60b5-0364-4ac8-afa6-205e3bbd2a94)
 
 <ins>Pipeline Design Architecture:</ins>
 1. Data Source: Sourced from 2 areas -- (1) [ActiveSG gym capacity](https://activesg.gov.sg/gym-capacity), (2) [Rainfall across Singapore](https://data.gov.sg/datasets/d_6580738cdd7db79374ed3152159fbd69/view)
