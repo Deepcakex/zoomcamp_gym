@@ -12,7 +12,7 @@ ActiveSG gyms, located across various sports centers in Singapore, aim to provid
 ![image](https://github.com/user-attachments/assets/3d4e60b5-0364-4ac8-afa6-205e3bbd2a94)
 
 <ins>Pipeline Design Architecture:</ins>
-1. Data Source: Sourced from 2 areas -- (1) [ActiveSG gym capacity](https://activesg.gov.sg/gym-capacity), (2) [Rainfall across Singapore](https://data.gov.sg/datasets/d_6580738cdd7db79374ed3152159fbd69/view)
-2. Data Lake: Extracted data is pushed into Google Cloud Storage Buckets as parquet files partitioned by date
-3. Data Warehouse: Parquet files are ingested to BigQuery
-4. BI Platform: Dashboard is developed using Tableau Desktop and published to Tableau server. (Tableau server acts as the BI gateway or query proxy between BigQuery and the published dashboards)
+1. **Data Source**: Sourced from 2 areas -- (1) [ActiveSG gym capacity](https://activesg.gov.sg/gym-capacity), (2) [Rainfall across Singapore](https://data.gov.sg/datasets/d_6580738cdd7db79374ed3152159fbd69/view)
+2. **Data Lake**: Extracted data is pushed into _Google Cloud Storage Buckets_ as parquet files partitioned by date
+3. **Data Warehouse**: Parquet files are ingested to _BigQuery_
+4. **BI Platform**: Dashboard is developed using _Tableau Desktop_ and published to _Tableau Server_. (Tableau Server acts as the BI gateway or query proxy between BigQuery and the published dashboards)
