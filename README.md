@@ -1,4 +1,4 @@
-# **Zoomcamp Capstone Project** - SG Gym Analysis
+# **ActiveSG Gym Analysis** 
 
 ## 1. **Problem Statement:**
 
