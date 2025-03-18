@@ -13,9 +13,9 @@ ActiveSG gyms, located across various sports centers in Singapore, aim to provid
 
 ### <ins>Pipeline Design Architecture:</ins>
 1. **Data Source**: Sourced from 2 areas -- (1) [ActiveSG gym capacity](https://activesg.gov.sg/gym-capacity), (2) [Rainfall across Singapore](https://data.gov.sg/datasets/d_6580738cdd7db79374ed3152159fbd69/view)
-2. **IaC Provisioning:** _Terraform_ is used to provision Google Cloud Infrastructure for data lake and warehourse
+2. **IaC Provisioning:** _Terraform_ is used to provision Google Cloud Infrastructure for data lake and warehouse
 3. **Workflow Orchestration:** _Kestra_ installed on Google Cloud Compute Engine within Docker containers - to schedule data collection and ingestion.
-4. **Storage & Ingestion**: Extracted data is pushed into _Google Cloud Storage Buckets_ (Data Lake) as parquet files which are partitioned according to the date, which are then ingested to _BigQuery_ (Data Warehouse).
+4. **Storage & Ingestion**: Extracted data is pushed to _Google Cloud Storage Buckets_ (Data Lake) as parquet files and ingested to _BigQuery_ (Data Warehouse).
 5. **Data Visualization**: Dashboard is developed using _Tableau Desktop_ and published to _Tableau Server_. (Tableau Server acts as the BI gateway or query proxy between BigQuery and the published dashboards)
 
 
@@ -54,13 +54,15 @@ Run the Kestra UI by keying in the following in the compute engine SSH
 ```
 sudo docker compose up
 ```
-Input 'http://12.345.678.910:8080/' (fake ip) in the url to open Kestra UI
+Input http://12.345.678.910:8080/ in the url to open Kestra UI. (URL is fake)
 
 ![image](https://github.com/user-attachments/assets/8e089b93-0440-4c82-b6ba-3c81c5201e0e)
 
 
 ## 4. **Deployment Setup**
-
+### Geocode the location
+### Python files
+### Kestra flow diagram
 
 ## 5. **Dashboard Access:**
 ### Preview
