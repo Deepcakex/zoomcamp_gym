@@ -39,7 +39,7 @@ This creates resources within Google Cloud Platform (GCP), where the service acc
 
 ![image](https://github.com/user-attachments/assets/cd46e756-35ba-4ce5-805d-ceb1e5c60a14)
 
-Both the **main.tf** file and the **variables.tf** should be located in the same directory. We then run the following commands to (1) Initialize terraform, (2) Review changes, (3) Create resources on Google Cloud.
+Both the **main.tf** file and the **variables.tf** should be located in the same directory. The following commands are run on VScode to (1) Initialize terraform, (2) Review changes, (3) Create resources on Google Cloud.
 
 ```
 terraform init
