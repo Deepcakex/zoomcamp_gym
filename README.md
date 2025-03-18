@@ -19,8 +19,8 @@ ActiveSG gyms, located across various sports centers in Singapore, aim to provid
 5. **Data Visualization**: Dashboard is developed using _Tableau Desktop_ and published to _Tableau Server_. (Tableau Server acts as the BI gateway or query proxy between BigQuery and the published dashboards)
 
 
-## 3. **Setup & Deployment:**
-### <ins>Identify the Data Sources</ins>
+## 3. **Setup**
+### <ins>Identify Data Sources</ins>
 (1) [ActiveSG gym capacity](https://activesg.gov.sg/gym-capacity), 
 - Contains the percentage capacity of various ActiveSG gyms updated at regular intervals (0% means completely empty and 100 means full).
 - The opening hours of the gym varies by location, usually between 7am-9.30pm/10pm.
@@ -34,7 +34,7 @@ ActiveSG gyms, located across various sports centers in Singapore, aim to provid
 
 
 
-### <ins>Creating the Resources</ins>
+### <ins>Creating Resources</ins>
 This creates resources within Google Cloud Platform (GCP), where the service account is created followed by storage buckets and BigQuery. Ensure that the 3 roles are assigned to this service account, following which we will create a new key which is named **my-creds.json**.
 
 ![image](https://github.com/user-attachments/assets/cd46e756-35ba-4ce5-805d-ceb1e5c60a14)
@@ -47,19 +47,27 @@ terraform plan
 terraform apply
 ```
 
-### Creating the Resources
+### <ins>Setting up workflow resources</ins>
+For setting up Kestra within Google Cloud, refer to the following [guide](https://www.youtube.com/watch?v=qwA7-hm7d2o) (skipped the cloud postgres SQL section as it wasn't relevant).
+
+Run the Kestra UI by keying in the following in the compute engine SSH
+```
+sudo docker compose up
+```
+Input 'http://12.345.678.910:8080/' (fake ip) in the url to open Kestra UI
+
+![image](https://github.com/user-attachments/assets/8e089b93-0440-4c82-b6ba-3c81c5201e0e)
 
 
+## 4. **Deploying:**
 
 
-
-
-## 4. **Dashboard Access:**
+## 5. **Dashboard Access:**
 ### Preview
 ### How to access
 ### How to use
 
-## 5. **Contributors**
+## 6. **Contributors**
 Author:
 Email:
 Citations:
