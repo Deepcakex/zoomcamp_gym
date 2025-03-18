@@ -20,7 +20,7 @@ ActiveSG gyms, located across various sports centers in Singapore, aim to provid
 
 
 ## 3. **Setup & Deployment:**
-### Identify the Data Sources
+### <ins>Identify the Data Sources</ins>
 (1) [ActiveSG gym capacity](https://activesg.gov.sg/gym-capacity), 
 - Contains the percentage capacity of various ActiveSG gyms updated at regular intervals (0% means completely empty and 100 means full).
 - The opening hours of the gym varies by location, usually between 7am-9.30pm/10pm.
@@ -31,6 +31,28 @@ ActiveSG gyms, located across various sports centers in Singapore, aim to provid
 - Contains the rainfall data in various collection stations all over the island.
 - This is an additional dataset to better understand the effects of weather on gym utilization
 - Complete rain data is scheduled for retrieval at 11pm daily, where data points are taken at every 30 min interval from 7.30am-9pm.
+
+
+
+### <ins>Creating the Resources</ins>
+This creates resources within Google Cloud Platform (GCP), where the service account is created followed by storage buckets and BigQuery. Ensure that the 3 roles are assigned to this service account, following which we will create a new key which is named **my-creds.json**.
+
+![image](https://github.com/user-attachments/assets/cd46e756-35ba-4ce5-805d-ceb1e5c60a14)
+
+Both the **main.tf** file and the **variables.tf** should be located in the same directory. We then run the following commands to (1) Initialize terraform, (2) Review changes, (3) Create resources on Google Cloud.
+
+```
+terraform init
+terraform plan
+terraform apply
+```
+
+### Creating the Resources
+
+
+
+
+
 
 ## 4. **Dashboard Access:**
 ### Preview
