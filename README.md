@@ -11,9 +11,33 @@ ActiveSG gyms, located across various sports centers in Singapore, aim to provid
 
 ![image](https://github.com/user-attachments/assets/8fa0cad8-63ad-408a-b967-47fab62681d6)
 
-<ins>Pipeline Design Architecture:</ins>
+### <ins>Pipeline Design Architecture:</ins>
 1. **Data Source**: Sourced from 2 areas -- (1) [ActiveSG gym capacity](https://activesg.gov.sg/gym-capacity), (2) [Rainfall across Singapore](https://data.gov.sg/datasets/d_6580738cdd7db79374ed3152159fbd69/view)
-2. **Workflow Orchestration:** _Kestra_ installed on Google Cloud Compute Engine within Docker containers - to schedule data collection and ingestion.
-3. **IaC Provisioning:** _Terraform_ is used to provision Google Cloud Infrastructure for data lake and warehourse
+2. **IaC Provisioning:** _Terraform_ is used to provision Google Cloud Infrastructure for data lake and warehourse
+3. **Workflow Orchestration:** _Kestra_ installed on Google Cloud Compute Engine within Docker containers - to schedule data collection and ingestion.
 4. **Storage & Ingestion**: Extracted data is pushed into _Google Cloud Storage Buckets_ (Data Lake) as parquet files which are partitioned according to the date, which are then ingested to _BigQuery_ (Data Warehouse).
 5. **Data Visualization**: Dashboard is developed using _Tableau Desktop_ and published to _Tableau Server_. (Tableau Server acts as the BI gateway or query proxy between BigQuery and the published dashboards)
+
+
+## 3. **Setup & Deployment:**
+### Identify the Data Sources
+(1) [ActiveSG gym capacity](https://activesg.gov.sg/gym-capacity), 
+- Contains the percentage capacity of various ActiveSG gyms updated at regular intervals (0% means completely empty and 100 means full).
+- The opening hours of the gym varies by location, usually between 7am-9.30pm/10pm.
+- To better capture the occupancy rates, data harvesting will be scheduled at every 30 min interval from 7.30am-9pm.
+
+
+(2) [Rainfall across Singapore](https://data.gov.sg/datasets/d_6580738cdd7db79374ed3152159fbd69/view)
+- Contains the rainfall data in various collection stations all over the island.
+- This is an additional dataset to better understand the effects of weather on gym utilization
+- Complete rain data is scheduled for retrieval at 11pm daily, where data points are taken at every 30 min interval from 7.30am-9pm.
+
+## 4. **Dashboard Access:**
+### Preview
+### How to access
+### How to use
+
+## 5. **Contributors**
+Author:
+Email:
+Citations:
