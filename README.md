@@ -37,7 +37,7 @@ ActiveSG gyms, located across various sports centers in Singapore, aim to provid
 ### <ins>3.2 Creating Resources</ins>
 This creates resources within Google Cloud Platform (GCP), where the service account is created followed by storage buckets and BigQuery. Ensure that the 3 roles are assigned to this service account, following which we will create a new key which is named **my-creds.json**.
 
-![image](https://github.com/user-attachments/assets/cd46e756-35ba-4ce5-805d-ceb1e5c60a14)
+![image](https://github.com/user-attachments/assets/c9ef31c7-ca5b-4898-bf00-ac15c0fc790c)
 
 Both the **main.tf** file and the **variables.tf** should be located in the same directory. The following commands are run on VScode to (1) Initialize terraform, (2) Review changes, (3) Create resources on Google Cloud.
 
