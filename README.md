@@ -168,11 +168,17 @@ Link to dashboard: [ActiveSG Gym Occupancy Dashboard](https://prod-apnortheast-a
 - **Password1:** ABCDe!@#$5
 
 ### How to use
+Refresh dashboard to latest available data
+
+![image](https://github.com/user-attachments/assets/7d7bde30-e1f8-4211-9deb-22d81d426138)
+
+To reset filters and actions to default
+
+![image](https://github.com/user-attachments/assets/53a8a631-c11d-4982-a777-2ccf7714ae8f)
 
 ### Known Issues
-[19/03/2025]: Missing data points in the morning due to compute engine issues on Google Cloud. Restored at noon.
+19/03/2025: Missing data points in the morning due to compute engine issues on Google Cloud. Restored at noon.
 
 ## 6. **Contributors**
-Author:
-Email:
-Citations:
+Author: Deepcakex
+Email: kingalwin90@gmail.com
