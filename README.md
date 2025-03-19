@@ -22,7 +22,7 @@ ActiveSG gyms, located across various sports centers in Singapore, aim to provid
 ## 3. **Resources Setup**
 ### <ins>3.1 Identify Data Sources</ins>
 (1) [ActiveSG gym capacity](https://activesg.gov.sg/gym-capacity), 
-- Contains the percentage capacity of various ActiveSG gyms updated at regular intervals (0% means completely empty and 100 means full).
+- Contains the percentage capacity of various ActiveSG gyms updated at regular intervals (0% means completely empty and 100% implies full).
 - The opening hours of the gym varies by location, usually between 7am-9.30pm/10pm.
 - To better capture the occupancy rates, data harvesting will be scheduled at every 30 min interval from 7.30am-9pm.
 
