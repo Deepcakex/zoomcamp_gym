@@ -94,72 +94,16 @@ For better visualization on maps, the spatial coordinates of each gym location w
 
 
 ### <ins>4.2 Kestra Workflow 1</ins>:
-```
-id: gym_scraper
-namespace: zoomcamp
-
-tasks:
-  - id: execute-python
-    type: io.kestra.plugin.scripts.python.Commands
-    taskRunner:
-      type: io.kestra.plugin.scripts.runner.docker.Docker
-    containerImage: xswordcraftx/my-custom-python-image:latest
-    namespaceFiles:
-      enabled: true
-    commands:
-      - python gym_scraper.py
-  
-  - id: load_bq
-    type: io.kestra.plugin.scripts.python.Commands
-    taskRunner:
-      type: io.kestra.plugin.scripts.runner.docker.Docker
-    containerImage: xswordcraftx/my-custom-python-image:latest
-    namespaceFiles:
-      enabled: true
-    commands:
-      - python bucket_to_bq.py
-
-  - id: purge_files
-    type: io.kestra.plugin.core.storage.PurgeCurrentExecutionFiles
-    description: Remove temp files to save space.
-    disabled: false
-
-triggers:
-  - id: gymdata_scheduler
-    type: io.kestra.plugin.core.trigger.Schedule
-    cron: "*/30 7-22 * * *"
-    timezone: "Singapore"
-```
-- **gym_scraper.py** - To store the gym capacity records of each location within Google Cloud Buckets 
-- **bucket_to_bq.py** - Ingest the data from bucket to BigQuery
+ `kestra_gym_scraper.yml` 
+    - `gym_scraper.py` - To store the gym capacity records of each location within Google Cloud Buckets 
+    - `bucket_to_bq.py` - Ingest the data from bucket to BigQuery
 
 <img src="https://github.com/user-attachments/assets/6b14fa7a-e716-476f-9a3a-df049e8df620" width="500" height="500"/>
 
 ### <ins>4.3 Kestra Workflow 2</ins>:
-```
-id: sg_rainfall
-namespace: zoomcamp
-
-tasks:
-  - id: execute-sgrainfall
-    type: io.kestra.plugin.scripts.python.Commands
-    taskRunner:
-      type: io.kestra.plugin.scripts.runner.docker.Docker
-    containerImage: xswordcraftx/my-custom-python-image:latest
-    namespaceFiles:
-      enabled: true
-    commands:
-      - pip install geopy
-      - python sg_rainfall.py
-
-triggers:
-  - id: raindata_scheduler
-    type: io.kestra.plugin.core.trigger.Schedule
-    cron: "0 23 * * *"
-    timezone: "Singapore"
-```
-- **sg_rainfall.py** - To store the rainfall records of each location within Google Cloud Buckets and ingestion to BigQuery
-    - To determine if there is rain around the gym location, each gym will have the nearest rain collection station mapped to it.
+`kestra_sg_rainfall.yml`
+    - **sg_rainfall.py** - To store the rainfall records of each location within Google Cloud Buckets and ingestion to BigQuery
+        - To determine if there is rain around the gym location, each gym will have the nearest rain collection station mapped to it.
 
 <img src="https://github.com/user-attachments/assets/3605f264-1fb7-4118-bd8b-3eceb8e47a97" width="800" height="300"/>
 
