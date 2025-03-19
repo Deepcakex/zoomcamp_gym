@@ -161,7 +161,7 @@ triggers:
 - **sg_rainfall.py** - To store the rainfall records of each location within Google Cloud Buckets and ingestion to BigQuery
     - To determine if there is rain around the gym location, each gym will have the nearest rain collection station mapped to it.
 
-<img src="https://github.com/user-attachments/assets/3605f264-1fb7-4118-bd8b-3eceb8e47a97" width="500" height="500"/>
+<img src="https://github.com/user-attachments/assets/3605f264-1fb7-4118-bd8b-3eceb8e47a97" width="800" height="300"/>
 
 ## 5. **Dashboard Access:**
 ### <ins>5.1 Preview</ins>
