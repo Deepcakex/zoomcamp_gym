@@ -163,9 +163,9 @@ triggers:
 ![ActiveSG Gym Occupancy Dashboard](https://github.com/user-attachments/assets/7551dc1f-2f47-4212-b2f2-f3f0a3656359)
 
 ### How to access
-Link to dashboard: (ActiveSG Gym Occupancy Dashboard)[https://prod-apnortheast-a.online.tableau.com/#/site/yovakot939-e1fcb74d21/views/sg_gym_capacity/ActiveSGGymOccupancyDashboard?:iid=1]
-- **Username:** molaxol425@cybtric.com
-- **Password:** ABCDe!@#$5
+Link to dashboard: [ActiveSG Gym Occupancy Dashboard](https://prod-apnortheast-a.online.tableau.com/#/site/yovakot939-e1fcb74d21/views/sg_gym_capacity/ActiveSGGymOccupancyDashboard?:iid=1])
+- **Username1:** molaxol425@cybtric.com
+- **Password1:** ABCDe!@#$5
 
 ### How to use
 
