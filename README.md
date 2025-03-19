@@ -128,10 +128,8 @@ triggers:
     cron: "*/30 7-22 * * *"
     timezone: "Singapore"
 ```
-- Docker Image
-- **gym_scraper.py** - To capture the daily capacity records of each gym location from 7.30am - 9pm every 30 minutes 
-
-
+- **gym_scraper.py** - To store the gym capacity records of each location within Google Cloud Buckets 
+- **bucket_to_bq.py** - Ingest the data from bucket to BigQuery
 
 ### Python files
 ### Kestra flow diagram
