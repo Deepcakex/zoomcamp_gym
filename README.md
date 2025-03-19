@@ -128,7 +128,7 @@ To reset filters and actions to default
 ![image](https://github.com/user-attachments/assets/53a8a631-c11d-4982-a777-2ccf7714ae8f)
 
 ### <ins>5.4 Known Issues</ins>
-19/03/2025: Missing data points in the morning due to compute engine issues on Google Cloud. Although restored Kestra at noon, unable to backfill data as it is live.
+19/03/2025: Missing data points in the morning due to compute engine issues on Google Cloud. Restored Kestra at noon but unable to backfill data as it is live.
 
 &nbsp;
 ## 6. **Contributors**
