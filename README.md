@@ -48,13 +48,26 @@ terraform apply
 ```
 
 ### <ins>3.3 Setting up workflow resources</ins>
-For setting up Kestra within Google Cloud, refer to the following [guide](https://www.youtube.com/watch?v=qwA7-hm7d2o) (skipped the cloud postgres SQL section as it wasn't relevant).
+For setting up Kestra within Google Cloud, refer to the following [guide](https://www.youtube.com/watch?v=qwA7-hm7d2o) (skipped the cloud postgres SQL section as it wasn't relevant). Installation and Docker setup are not covered in the video but the steps may be found below. 
+```
+> sudo apt update
+> sudo apt install -y ca-certificates curl gnupg
+> sudo install -m 0755 -d /etc/apt/keyrings
+> curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo tee /etc/apt/keyrings/docker.asc > /dev/null
+> sudo chmod a+r /etc/apt/keyrings/docker.asc
+> echo \
+    "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+    $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  sudo apt update
+> sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+> sudo docker --version
+```
 
 Run the Kestra UI by keying in the following in the compute engine SSH
 ```
 sudo docker compose up
 ```
-Input http://12.345.678.910:8080/ in the url to open Kestra UI. (URL is fake)
+Input http://12.345.678.91:8080/ in the url to open Kestra UI. (URL is for illustration purposes)
 
 ![image](https://github.com/user-attachments/assets/8e089b93-0440-4c82-b6ba-3c81c5201e0e)
 
@@ -68,6 +81,7 @@ Input http://12.345.678.910:8080/ in the url to open Kestra UI. (URL is fake)
 ### Preview
 ### How to access
 ### How to use
+### Known Issues
 
 ## 6. **Contributors**
 Author:
