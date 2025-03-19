@@ -91,7 +91,7 @@ For better visualization on maps, the spatial coordinates of each gym location w
 - **Output File:** gymlist_geocode.csv
 
 
-### <ins>4.2 Workflow 1</ins>:
+### <ins>4.2 Kestra Workflow 1</ins>:
 ```
 id: gym_scraper
 namespace: zoomcamp
@@ -131,14 +131,46 @@ triggers:
 - **gym_scraper.py** - To store the gym capacity records of each location within Google Cloud Buckets 
 - **bucket_to_bq.py** - Ingest the data from bucket to BigQuery
 
-### Python files
-### Kestra flow diagram
+### <ins>4.3 Kestra Workflow 2</ins>:
+```
+id: sg_rainfall
+namespace: zoomcamp
 
+tasks:
+  - id: execute-sgrainfall
+    type: io.kestra.plugin.scripts.python.Commands
+    taskRunner:
+      type: io.kestra.plugin.scripts.runner.docker.Docker
+    containerImage: xswordcraftx/my-custom-python-image:latest
+    namespaceFiles:
+      enabled: true
+    commands:
+      - pip install geopy
+      - python sg_rainfall.py
+
+triggers:
+  - id: raindata_scheduler
+    type: io.kestra.plugin.core.trigger.Schedule
+    cron: "0 23 * * *"
+    timezone: "Singapore"
+```
+- **sg_rainfall.py** - To store the rainfall records of each location within Google Cloud Buckets and ingestion to BigQuery
+    - To determine if there is rain around the gym location, each gym will have the nearest rain collection station mapped to it.
+ 
+ 
 ## 5. **Dashboard Access:**
 ### Preview
+![ActiveSG Gym Occupancy Dashboard](https://github.com/user-attachments/assets/7551dc1f-2f47-4212-b2f2-f3f0a3656359)
+
 ### How to access
+Link to dashboard: (ActiveSG Gym Occupancy Dashboard)[https://prod-apnortheast-a.online.tableau.com/#/site/yovakot939-e1fcb74d21/views/sg_gym_capacity/ActiveSGGymOccupancyDashboard?:iid=1]
+- **Username:** molaxol425@cybtric.com
+- **Password:** ABCDe!@#$5
+
 ### How to use
+
 ### Known Issues
+[19/03/2025]: Missing data points in the morning due to compute engine issues on Google Cloud. Restored at noon.
 
 ## 6. **Contributors**
 Author:
