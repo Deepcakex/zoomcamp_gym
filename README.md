@@ -6,7 +6,7 @@ Gym-goers often struggle with overcrowding, leading to a suboptimal workout expe
 
 ActiveSG gyms, located across various sports centers in Singapore, aim to provide affordable and accessible workout facilities. This project seeks to analyze occupancy trends in these gyms based on location, time of day, day of the week, and external factors such as weather (e.g., rainfall). By leveraging real-time capacity data collected every 30 minutes, we can identify patterns that impact gym utilization. These insights will help gym-goers plan their visits more effectively while enabling gym operators to optimize staffing, equipment availability, and membership management.
 
-
+&nbsp;
 ## 2. **Overview:**
 
 ![image](https://github.com/user-attachments/assets/21409939-30db-49f5-83d1-32317f3197d6)
@@ -18,7 +18,7 @@ ActiveSG gyms, located across various sports centers in Singapore, aim to provid
 4. **Storage & Ingestion**: Extracted data is pushed to _Google Cloud Storage Buckets_ (Data Lake) as parquet files and ingested to _BigQuery_ (Data Warehouse)
 5. **Data Visualization**: Dashboard is developed using _Tableau Desktop_ and published to _Tableau Server_ (Tableau Server acts as the BI gateway or query proxy between BigQuery and the published dashboards)
 
-
+&nbsp;
 ## 3. **Resources Setup**
 ### <ins>3.1 Identify Data Sources</ins>
 (1) [ActiveSG gym capacity](https://activesg.gov.sg/gym-capacity), 
@@ -84,6 +84,7 @@ For installation of relevant python packages & scraper tools to use within Kestr
 ```
 Published image may be found in this [link](https://hub.docker.com/r/xswordcraftx/my-custom-python-image) 
 
+&nbsp;
 ## 4. **Deployment**
 ### <ins>4.1 Geocode the location</ins>
 For better visualization on maps, the spatial coordinates of each gym location will be generated through Google Map API.
@@ -107,6 +108,7 @@ For better visualization on maps, the spatial coordinates of each gym location w
 
 <img src="https://github.com/user-attachments/assets/3605f264-1fb7-4118-bd8b-3eceb8e47a97" width="800" height="300"/>
 
+&nbsp;
 ## 5. **Dashboard Access:**
 ### <ins>5.1 Preview</ins>
 ![ActiveSG Gym Occupancy Dashboard](https://github.com/user-attachments/assets/7551dc1f-2f47-4212-b2f2-f3f0a3656359)
@@ -128,6 +130,7 @@ To reset filters and actions to default
 ### <ins>5.4 Known Issues</ins>
 19/03/2025: Missing data points in the morning due to compute engine issues on Google Cloud. Although restored Kestra at noon, unable to backfill data as it is live.
 
+&nbsp;
 ## 6. **Contributors**
 
 Author: Deepcakex
