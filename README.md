@@ -133,6 +133,8 @@ triggers:
 - **gym_scraper.py** - To store the gym capacity records of each location within Google Cloud Buckets 
 - **bucket_to_bq.py** - Ingest the data from bucket to BigQuery
 
+<img src="https://github.com/user-attachments/assets/6b14fa7a-e716-476f-9a3a-df049e8df620" width="500" height="500"/>
+
 ### <ins>4.3 Kestra Workflow 2</ins>:
 ```
 id: sg_rainfall
@@ -158,8 +160,9 @@ triggers:
 ```
 - **sg_rainfall.py** - To store the rainfall records of each location within Google Cloud Buckets and ingestion to BigQuery
     - To determine if there is rain around the gym location, each gym will have the nearest rain collection station mapped to it.
- 
- 
+
+<img src="https://github.com/user-attachments/assets/3605f264-1fb7-4118-bd8b-3eceb8e47a97" width="500" height="500"/>
+
 ## 5. **Dashboard Access:**
 ### <ins>5.1 Preview</ins>
 ![ActiveSG Gym Occupancy Dashboard](https://github.com/user-attachments/assets/7551dc1f-2f47-4212-b2f2-f3f0a3656359)
