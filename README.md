@@ -71,19 +71,27 @@ Input http://12.345.678.91:8080/ in the url to open Kestra UI. (URL is for illus
 
 ![image](https://github.com/user-attachments/assets/8e089b93-0440-4c82-b6ba-3c81c5201e0e)
 
+### <ins>3.4 Building an image on Docker Hub with preinstalled python packages & tools</ins>
+For installation of relevant python packages & scraper tools to use within Kestra, you may refer to the file **my-python-docker/Dockerfile**. (Note that this is done on local machine)
+```
+> cd my-python-docker
+> docker build -t my-custom-python-image:latest .
+> docker login
+> docker tag my-custom-python-image:latest xswordcraftx/my-custom-python-image:latest
+> docker push xswordcraftx/my-custom-python-image:latest
+```
+Published image may be found in this [link](https://hub.docker.com/r/xswordcraftx/my-custom-python-image) 
 
 ## 4. **Deployment**
-### Geocode the location
+### <ins>4.1 Geocode the location</ins>
 For better visualization on maps, the spatial coordinates of each gym location will be generated through Google Map API.
 
-**Input File:** gymlist.csv
-**Processing Script:** gym_location_geocoding.py
-**Output File:** gymlist_geocode.csv
-
-### Building Docker image with preinstalled python packages for scraping and processing the data
+- **Input File:** gymlist.csv
+- **Processing Script:** gym_location_geocoding.py
+- **Output File:** gymlist_geocode.csv
 
 
-### Kestra Process Flow 1:
+### <ins>4.2 Workflow 1</ins>:
 ```
 id: gym_scraper
 namespace: zoomcamp
