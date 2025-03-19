@@ -159,15 +159,15 @@ triggers:
  
  
 ## 5. **Dashboard Access:**
-### Preview
+### <ins>5.1 Preview</ins>
 ![ActiveSG Gym Occupancy Dashboard](https://github.com/user-attachments/assets/7551dc1f-2f47-4212-b2f2-f3f0a3656359)
 
-### How to access
+### <ins>5.2 How to access</ins>
 Link to dashboard: [ActiveSG Gym Occupancy Dashboard](https://prod-apnortheast-a.online.tableau.com/#/site/yovakot939-e1fcb74d21/views/sg_gym_capacity/ActiveSGGymOccupancyDashboard?:iid=1])
 - **Username1:** molaxol425@cybtric.com
 - **Password1:** ABCDe!@#$5
 
-### How to use
+### <ins>5.3 How to use</ins>
 Refresh dashboard to latest available data
 
 ![image](https://github.com/user-attachments/assets/7d7bde30-e1f8-4211-9deb-22d81d426138)
@@ -176,7 +176,7 @@ To reset filters and actions to default
 
 ![image](https://github.com/user-attachments/assets/53a8a631-c11d-4982-a777-2ccf7714ae8f)
 
-### Known Issues
+### <ins>5.4 Known Issues</ins>
 19/03/2025: Missing data points in the morning due to compute engine issues on Google Cloud. Restored at noon.
 
 ## 6. **Contributors**
