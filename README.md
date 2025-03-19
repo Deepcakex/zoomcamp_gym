@@ -72,8 +72,59 @@ Input http://12.345.678.91:8080/ in the url to open Kestra UI. (URL is for illus
 ![image](https://github.com/user-attachments/assets/8e089b93-0440-4c82-b6ba-3c81c5201e0e)
 
 
-## 4. **Deployment Setup**
+## 4. **Deployment**
 ### Geocode the location
+For better visualization on maps, the spatial coordinates of each gym location will be generated through Google Map API.
+
+**Input File:** gymlist.csv
+**Processing Script:** gym_location_geocoding.py
+**Output File:** gymlist_geocode.csv
+
+### Building Docker image with preinstalled python packages for scraping and processing the data
+
+
+### Kestra Process Flow 1:
+```
+id: gym_scraper
+namespace: zoomcamp
+
+tasks:
+  - id: execute-python
+    type: io.kestra.plugin.scripts.python.Commands
+    taskRunner:
+      type: io.kestra.plugin.scripts.runner.docker.Docker
+    containerImage: xswordcraftx/my-custom-python-image:latest
+    namespaceFiles:
+      enabled: true
+    commands:
+      - python gym_scraper.py
+  
+  - id: load_bq
+    type: io.kestra.plugin.scripts.python.Commands
+    taskRunner:
+      type: io.kestra.plugin.scripts.runner.docker.Docker
+    containerImage: xswordcraftx/my-custom-python-image:latest
+    namespaceFiles:
+      enabled: true
+    commands:
+      - python bucket_to_bq.py
+
+  - id: purge_files
+    type: io.kestra.plugin.core.storage.PurgeCurrentExecutionFiles
+    description: Remove temp files to save space.
+    disabled: false
+
+triggers:
+  - id: gymdata_scheduler
+    type: io.kestra.plugin.core.trigger.Schedule
+    cron: "*/30 7-22 * * *"
+    timezone: "Singapore"
+```
+- Docker Image
+- **gym_scraper.py** - To capture the daily capacity records of each gym location from 7.30am - 9pm every 30 minutes 
+
+
+
 ### Python files
 ### Kestra flow diagram
 
