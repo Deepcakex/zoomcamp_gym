@@ -14,9 +14,9 @@ ActiveSG gyms, located across various sports centers in Singapore, aim to provid
 ### <ins>Pipeline Design Architecture:</ins>
 1. **Data Source**: Sourced from 2 areas -- (1) [ActiveSG gym capacity](https://activesg.gov.sg/gym-capacity), (2) [Rainfall across Singapore](https://data.gov.sg/datasets/d_6580738cdd7db79374ed3152159fbd69/view)
 2. **IaC Provisioning:** _Terraform_ is used to provision Google Cloud Infrastructure for data lake and warehouse
-3. **Workflow Orchestration:** _Kestra_ installed on Google Cloud Compute Engine within Docker containers - to schedule data collection and ingestion.
-4. **Storage & Ingestion**: Extracted data is pushed to _Google Cloud Storage Buckets_ (Data Lake) as parquet files and ingested to _BigQuery_ (Data Warehouse).
-5. **Data Visualization**: Dashboard is developed using _Tableau Desktop_ and published to _Tableau Server_. (Tableau Server acts as the BI gateway or query proxy between BigQuery and the published dashboards)
+3. **Workflow Orchestration:** _Kestra_ installed on Google Cloud Compute Engine within Docker containers
+4. **Storage & Ingestion**: Extracted data is pushed to _Google Cloud Storage Buckets_ (Data Lake) as parquet files and ingested to _BigQuery_ (Data Warehouse)
+5. **Data Visualization**: Dashboard is developed using _Tableau Desktop_ and published to _Tableau Server_ (Tableau Server acts as the BI gateway or query proxy between BigQuery and the published dashboards)
 
 
 ## 3. **Resources Setup**
