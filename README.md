@@ -48,7 +48,9 @@ terraform apply
 ```
 
 ### <ins>3.3 Setting up workflow resources</ins>
-For setting up Kestra within Google Cloud, refer to the following [guide](https://www.youtube.com/watch?v=qwA7-hm7d2o) (skipped the cloud postgres SQL section as it wasn't relevant). Installation and Docker setup are not covered in the video but the steps may be found below. 
+For setting up Kestra within Google Cloud, refer to the following [guide](https://www.youtube.com/watch?v=qwA7-hm7d2o) (skipped the cloud postgres SQL section as it wasn't relevant). 
+
+Installation and Docker setup are not covered in the video but the steps may be found below. 
 ```
 > sudo apt update
 > sudo apt install -y ca-certificates curl gnupg
