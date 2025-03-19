@@ -164,8 +164,8 @@ triggers:
 
 ### <ins>5.2 How to access</ins>
 Link to dashboard: [ActiveSG Gym Occupancy Dashboard](https://prod-apnortheast-a.online.tableau.com/#/site/yovakot939-e1fcb74d21/views/sg_gym_capacity/ActiveSGGymOccupancyDashboard?:iid=1])
-- **Username1:** molaxol425@cybtric.com
-- **Password1:** ABCDe!@#$5
+- **Username1:** `molaxol425@cybtric.com`
+- **Password1:** `ABCDe!@#$5`
 
 ### <ins>5.3 How to use</ins>
 Refresh dashboard to latest available data
