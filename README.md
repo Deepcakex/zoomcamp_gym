@@ -170,7 +170,7 @@ Link to dashboard: [ActiveSG Gym Occupancy Dashboard](https://prod-apnortheast-a
 - **Password1:** `ABCDe!@#$5`
 
 ### <ins>5.3 How to use</ins>
-Refresh dashboard to latest available data
+**(IMPT)** Refresh dashboard to latest available data
 
 ![image](https://github.com/user-attachments/assets/7d7bde30-e1f8-4211-9deb-22d81d426138)
 
