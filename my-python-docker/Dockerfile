@@ -16,6 +16,3 @@ ENV CHROMEDRIVER_PATH=/usr/lib/chromium/chromedriver
 
 # Step 5: Set working directory (if needed)
 WORKDIR /app
-
-# Step 6: Command to run the app or container (if you have a script)
-# CMD ["python", "your_script.py"]
