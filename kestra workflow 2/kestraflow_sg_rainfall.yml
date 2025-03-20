@@ -1,0 +1,20 @@
+id: sg_rainfall
+namespace: zoomcamp
+
+tasks:
+  - id: execute-sgrainfall
+    type: io.kestra.plugin.scripts.python.Commands
+    taskRunner:
+      type: io.kestra.plugin.scripts.runner.docker.Docker
+    containerImage: xswordcraftx/my-custom-python-image:latest
+    namespaceFiles:
+      enabled: true
+    commands:
+      - pip install geopy
+      - python sg_rainfall.py
+
+triggers:
+  - id: raindata_scheduler
+    type: io.kestra.plugin.core.trigger.Schedule
+    cron: "0 23 * * *"
+    timezone: "Singapore"

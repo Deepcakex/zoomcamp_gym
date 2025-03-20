@@ -1,0 +1,34 @@
+id: gym_scraper
+namespace: zoomcamp
+
+tasks:
+  - id: execute-python
+    type: io.kestra.plugin.scripts.python.Commands
+    taskRunner:
+      type: io.kestra.plugin.scripts.runner.docker.Docker
+    containerImage: xswordcraftx/my-custom-python-image:latest
+    namespaceFiles:
+      enabled: true
+    commands:
+      - python gym_scraper.py
+  
+  - id: load_bq
+    type: io.kestra.plugin.scripts.python.Commands
+    taskRunner:
+      type: io.kestra.plugin.scripts.runner.docker.Docker
+    containerImage: xswordcraftx/my-custom-python-image:latest
+    namespaceFiles:
+      enabled: true
+    commands:
+      - python bucket_to_bq.py
+
+  - id: purge_files
+    type: io.kestra.plugin.core.storage.PurgeCurrentExecutionFiles
+    description: Remove temp files to save space.
+    disabled: false
+
+triggers:
+  - id: gymdata_scheduler
+    type: io.kestra.plugin.core.trigger.Schedule
+    cron: "*/30 7-22 * * *"
+    timezone: "Singapore"
