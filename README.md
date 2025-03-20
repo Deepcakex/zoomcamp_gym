@@ -134,9 +134,9 @@ To reset filters and actions to default
 
 &nbsp;
 ## 6. **Contributors**
-&nbsp;
-Author: Deepcakex
-&nbsp;
-Email: kingalwin90@gmail.com
-&nbsp;
-Contact Me: Do add New Issues (if any), or reach out to me via email.
+
+**Author:** Deepcakex
+
+**Email:** kingalwin90@gmail.com
+
+**Contact Me:** Do add New Issues (if any), or reach out to me via email.
