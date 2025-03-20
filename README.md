@@ -127,14 +127,16 @@ To reset filters and actions to default
 
 ![image](https://github.com/user-attachments/assets/53a8a631-c11d-4982-a777-2ccf7714ae8f)
 
-### <ins>5.4 Known Issues</ins>
-19/03/2025: Missing data points in the morning due to compute engine issues on Google Cloud. Restored Kestra at noon but unable to backfill data as it is live.
+### <ins>5.4 For your awareness</ins>
+- 19/03/2025 - Missing data points in the morning due to compute engine issues on Google Cloud. Restored Kestra at noon but unable to backfill data as it is live.
+- This project will stop running on the 2nd May 2025 as GCP credits are set to expire.
+- As Tableau Server is on a 14 day free trial account, the URL will be changed every 2 weeks until the grading is complete 
 
 &nbsp;
 ## 6. **Contributors**
-
+&nbsp;
 Author: Deepcakex
-
+&nbsp;
 Email: kingalwin90@gmail.com
-
-Sample Data & Workbook: Available upon request
+&nbsp;
+Contact Me: Do add New Issues (if any), or reach out to me via email.
