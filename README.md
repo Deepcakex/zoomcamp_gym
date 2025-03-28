@@ -101,13 +101,14 @@ For better visualization on maps, the spatial coordinates of each gym location w
 
 ![image](https://github.com/user-attachments/assets/d3811e75-36ed-46b1-b5cc-000231fc4092)
 
+![image](https://github.com/user-attachments/assets/cd630eb0-4a6d-4cd8-a263-d32e6dc7f510)
 
 ### <ins>4.3 Kestra Workflow 2</ins>:
 `kestra_sg_rainfall.yml`
 - **sg_rainfall.py** - To store the rainfall records of each location within Google Cloud Buckets and ingestion to BigQuery
     - To determine if there is rain around the gym location, each gym will have the nearest rain collection station mapped to it.
 
-![image](https://github.com/user-attachments/assets/cd630eb0-4a6d-4cd8-a263-d32e6dc7f510)
+![image](https://github.com/user-attachments/assets/945dd5d3-384d-4fe2-892e-a080e3813393)
 
 
 &nbsp;
