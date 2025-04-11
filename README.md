@@ -117,7 +117,7 @@ For better visualization on maps, the spatial coordinates of each gym location w
 ![ActiveSG Gym Occupancy Dashboard](https://github.com/user-attachments/assets/7551dc1f-2f47-4212-b2f2-f3f0a3656359)
 
 ### <ins>5.2 How to access</ins>
-Link to dashboard: [ActiveSG Gym Occupancy Dashboard](https://prod-apnortheast-a.online.tableau.com/#/site/layip57138-64a805e118/views/sg_gym_capacity/ActiveSGGymOccupancyDashboard?:iid=1)
+Link to dashboard: [ActiveSG Gym Occupancy Dashboard](https://prod-apsoutheast-b.online.tableau.com/#/site/wovihe7897-5fbdd37d0f/views/sg_gym_capacity/ActiveSGGymOccupancyDashboard?:iid=1)
 - **Username1:** `molaxol425@cybtric.com`
 - **Password1:** `ABCDe!@#$5`
 
